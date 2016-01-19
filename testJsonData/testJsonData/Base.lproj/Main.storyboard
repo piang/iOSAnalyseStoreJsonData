@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testJsonData" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmJ-Oo-nJ7">
+                                <rect key="frame" x="130" y="40" width="70" height="30"/>
+                                <state key="normal" title="解析数据"/>
+                                <connections>
+                                    <action selector="AnalysisDataButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bhY-uu-jun"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVJ-Bu-5db">
+                                <rect key="frame" x="40" y="40" width="70" height="30"/>
+                                <state key="normal" title="原始数据"/>
+                                <connections>
+                                    <action selector="OriginalDataButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZG-Tg-uve"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLH-4c-jnr">
+                                <rect key="frame" x="220" y="40" width="70" height="30"/>
+                                <state key="normal" title="转换数据"/>
+                                <connections>
+                                    <action selector="ConvertDataButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Y9-Xc-oeK"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fS5-Lg-hiu">
+                                <rect key="frame" x="35" y="78" width="525" height="334"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5m0-ag-RKY">
+                                <rect key="frame" x="28" y="432" width="120" height="42"/>
+                                <state key="normal" title="NSUserDefaults"/>
+                                <connections>
+                                    <action selector="userDefaultsStoreButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YG2-tC-8Y6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KP9-dG-Zy1">
+                                <rect key="frame" x="35" y="492" width="46" height="30"/>
+                                <state key="normal" title="Plist"/>
+                                <connections>
+                                    <action selector="plistStoreButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wfj-yQ-eW2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bs-8m-Ihs">
+                                <rect key="frame" x="40" y="537" width="46" height="30"/>
+                                <state key="normal" title="Sqlite"/>
+                                <connections>
+                                    <action selector="sqliteStoreButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b2J-vG-piF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bLH-4c-jnr" firstAttribute="leading" secondItem="MmJ-Oo-nJ7" secondAttribute="trailing" constant="20" id="35R-6n-C6F"/>
+                            <constraint firstItem="fVJ-Bu-5db" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="4i5-Dt-9MW"/>
+                            <constraint firstItem="2bs-8m-Ihs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="5ef-xq-LlR"/>
+                            <constraint firstItem="2bs-8m-Ihs" firstAttribute="top" secondItem="KP9-dG-Zy1" secondAttribute="bottom" constant="20" id="6oT-9z-G9G"/>
+                            <constraint firstItem="KP9-dG-Zy1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="8cw-Dh-vFr"/>
+                            <constraint firstItem="fS5-Lg-hiu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Dkv-Pa-cmn"/>
+                            <constraint firstItem="KP9-dG-Zy1" firstAttribute="top" secondItem="5m0-ag-RKY" secondAttribute="bottom" constant="20" id="E9q-TG-Yd0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fS5-Lg-hiu" secondAttribute="trailing" constant="20" id="HoD-Pi-ogD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5m0-ag-RKY" secondAttribute="bottom" constant="100" id="InE-va-CIh"/>
+                            <constraint firstItem="MmJ-Oo-nJ7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Juf-a5-gGr"/>
+                            <constraint firstItem="fS5-Lg-hiu" firstAttribute="top" secondItem="fVJ-Bu-5db" secondAttribute="bottom" constant="20" id="MtP-4I-9hd"/>
+                            <constraint firstItem="bLH-4c-jnr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="OJW-21-gFH"/>
+                            <constraint firstItem="5m0-ag-RKY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="e8J-78-1w5"/>
+                            <constraint firstItem="5m0-ag-RKY" firstAttribute="top" secondItem="fS5-Lg-hiu" secondAttribute="bottom" constant="20" id="oKq-eY-SV2"/>
+                            <constraint firstItem="fVJ-Bu-5db" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="p2k-Le-N9c"/>
+                            <constraint firstItem="MmJ-Oo-nJ7" firstAttribute="leading" secondItem="fVJ-Bu-5db" secondAttribute="trailing" constant="20" id="yEZ-fc-Fos"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="analysisDataButton" destination="MmJ-Oo-nJ7" id="b3t-qx-hNj"/>
+                        <outlet property="analysisDataTextView" destination="fS5-Lg-hiu" id="zAW-of-6bu"/>
+                        <outlet property="convertDataButton" destination="bLH-4c-jnr" id="9eg-g6-Gv2"/>
+                        <outlet property="originalDataButton" destination="fVJ-Bu-5db" id="xJ4-TB-1xH"/>
+                        <outlet property="plistStoreButton" destination="KP9-dG-Zy1" id="bph-3i-vfD"/>
+                        <outlet property="sqliteStoreButton" destination="2bs-8m-Ihs" id="TF2-90-h2s"/>
+                        <outlet property="userDefaultsStoreButton" destination="5m0-ag-RKY" id="1Wk-oI-31a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="227"/>
+        </scene>
+    </scenes>
+</document>
